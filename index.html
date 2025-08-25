@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartilha de Acessibilidade Web</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <div class="container header-container">
+
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#intro">Início</a></li>
+                    <li><a href="#principios">Princípios</a></li>
+                    <li><a href="#desafios">Desafios</a></li>
+                    <li><a href="#importancia">Importância</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+                <span id="theme-text">Tema claro</span>
+                <span id="theme-icon">
+                    <!-- Ícone sol (claro) padrão -->
+                    <svg id="icon-sun" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2" />
+                        <path
+                            d="M12 1V3M12 21V23M4.22 4.22L5.64 5.64M18.36 18.36L19.78 19.78M1 12H3M21 12H23M4.22 19.78L5.64 18.36M18.36 5.64L19.78 4.22"
+                            stroke="currentColor" stroke-width="2" />
+                    </svg>
+                    <!-- Ícone lua (escuro) escondido inicialmente -->
+                    <svg id="icon-moon" width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"
+                        style="display:none;">
+                        <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" stroke="currentColor" stroke-width="2"
+                            fill="none" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro" class="content-section fade-in">
+            <div class="container section-container">
+                <div class="text-content">
+                    <h1>Desenvolvendo aplicativos e páginas acessíveis</h1>
+                    <p>Um guia informativo para o planejamento e desenvolvimento de interfaces acessíveis.</p>
+                </div>
+                <div class="image-content">
+                    <img src="assets\imagens\karacis-studio-pquE90oyRjU-unsplash.svg"
+                        alt="Ilustração sobre desenvolvimento web acessível">
+                </div>
+            </div>
+        </section>
+
+        <section id="introtext" class="content-section fade-in">
+            <div class="container section-container">
+                <div class="text-content">
+
+                    <p>A acessibilidade digital garante que todos possam usar aplicativos e sites de forma inclusiva.
+                        Além de ampliar o alcance e melhorar a experiência de navegação, este guia foi elaborado em
+                        conformidade com as diretrizes da WCAG, promovendo igualdade de oportunidades no ambiente
+                        digital.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="principios" class="content-section  fade-in">
+            <div class="container section-container">
+                <div class="text-content">
+                    <h2>O que é WCAG ?</h2>
+                    <p>WCAG (Web Content Accessibility Guidelines) são diretrizes internacionais Desenvolvidas pelo W3C
+                        (World Wide Web Consortium)
+                        que definem como tornar conteúdo web acessível para pessoas com deficiências. Os quatro pilares
+                        da WCAG são:</p>
+                    <ul>
+                        <li><strong>Perceptível</strong> - A informação não pode ser invisível aos sentidos do usuário.
+                        </li>
+                        <li><strong>Operável</strong> - A interface deve ser navegável e utilizável.</li>
+                        <li><strong>Compreensível</strong> - A informação e a operação devem ser claras.</li>
+                        <li><strong>Robusto</strong> - Compatível com tecnologias assistivas.</li>
+                    </ul>
+                    <p>O WCAG define três níveis de conformidade para medir o quão acessível um conteúdo é. Nivel A
+                        "acessivel", AA "Muito acessivel"
+                        , AAA "Extremamente acessivel".</p>
+
+
+                </div>
+                <div class="image-content">
+                    <img src="assets\imagens\Guia-Criar-cursos-acessiveis_BR.webp"
+                        alt="Ilustração dos quatro princípios de acessibilidade WCAG.">
+                </div>
+            </div>
+        </section>
+
+        <section id="desafios" class="content-section fade-in">
+            <div class="container section-container">
+                <div class="image-content">
+                    <img src="assets\imagens\toms-stals-mEwYP78-Rfw-unsplash.svg"
+                        alt="Ilustração de desafios na acessibilidade web.">
+                </div>
+                <div class="text-content">
+                    <h2>Compatibilidade com Tecnologias Assistivas</h2>
+                    <p>Para que sua aplicação ou página se torne acessível, ela deve ser desenvolvida para interagir
+                        corretamente com diversas tecnologias assistivas, permitindo que usuários com deficiência
+                        naveguem e utilizem o conteúdo de forma autônoma.</p>
+
+                    <ul>
+                        <li>
+                            <strong>Leitores de Tela:</strong> Ferramentas essenciais que convertem texto e elementos da
+                            interface em áudio ou braile. Os principais incluem o NVDA e o JAWS (Windows), o VoiceOver
+                            (macOS e iOS) e o TalkBack (Android).
+                        </li>
+                        <li>
+                            <strong>Navegação:</strong> Garanta que a navegação seja possível para todos. Na web, a
+                            navegação via teclado é essencial. Em aplicativos móveis, a navegação via gestos (como
+                            toques e deslizes) deve ser robusta.
+                        </li>
+                        <li>
+                            <strong>Exemplos de Boas Práticas:</strong>
+                            <ul>
+                                <li>Na web, use <code>roles ARIA</code> para definir o papel de componentes que não são
+                                    semânticos, como um botão customizado.</li>
+                                <li>Em apps móveis, forneça sempre uma <code>accessibilityLabel</code> para descrever a
+                                    função de cada elemento da interface.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="importancia" class="content-section  fade-in">
+            <div class="container section-container">
+                <div class="text-content">
+                    <h2>Conteúdo Visual e Multimídia</h2>
+                    <p>O conteúdo visual e auditivo deve ser acessível para que todos os usuários possam compreender a
+                        informação. Isso inclui fornecer alternativas de texto para imagens e legendas para mídias em
+                        vídeo.</p>
+
+                    <ul>
+                        <li>
+                            <strong>Texto Alternativo em Imagens:</strong> Use o atributo <code>alt</code> em todas as
+                            imagens para descrever seu conteúdo ou função. Para imagens puramente decorativas, o
+                            atributo deve ser vazio (<code>alt=""</code>), informando ao leitor de tela que ele pode ser
+                            ignorado.
+                        </li>
+                        <li>
+                            <strong>Legendas e Transcrições:</strong> Forneça legendas ou transcrições para todo
+                            conteúdo de vídeo e áudio. Isso é essencial para usuários com deficiência auditiva, além de
+                            beneficiar aqueles que não podem ouvir o áudio no momento.
+                        </li>
+                        <li>
+                            <strong>Contraste de Cores:</strong> Garanta que o contraste entre o texto e o fundo seja
+                            suficiente para que o conteúdo seja lido por pessoas com baixa visão ou daltonismo. Para
+                            garantir a legibilidade, o W3C recomenda uma "taxa de contraste" mínima.:
+                            <ul>
+                                <li>Para <strong>texto pequeno</strong> (abaixo de 18pt regular ou 14pt em negrito), a
+                                    taxa de
+                                    contraste deve ser de, no mínimo, <strong>4,5:1</strong>.</li>
+                                <li>Para <strong>texto grande</strong> (18pt ou mais regular, ou 14pt ou mais em
+                                    negrito), a taxa de
+                                    contraste pode ser um pouco menor, de <strong>3,0:1</strong>.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="image-content">
+                    <img src="assets\imagens\public-domain-vectors-AqHF8gSN59o-unsplash.svg"
+                        alt="Ilustração sobre o impacto positivo da acessibilidade digital.">
+                </div>
+            </div>
+
+        </section>
+        <section id="Ferramentas_Acessibilidade" class="content-section fade-in">
+            <div class="container section-container">
+                <div class="image-content">
+                    <img src="assets\imagens\round-icons-Yn1zx_FjfS0-unsplash.svg"
+                        alt="Ilustração de desafios na acessibilidade web.">
+                </div>
+                <div class="text-content">
+                    <h2>Ferramentas e Testes de Acessibilidade</h2>
+                    <p>Para garantir que seu produto digital seja acessível, é fundamental combinar a automação de
+                        ferramentas com testes práticos e manuais.</p>
+
+                    <ul>
+                        <li>
+                            <strong>Ferramentas de Análise Automática:</strong>
+                            <p>Elas analisam o código e encontram erros básicos e padrões que violam as diretrizes de
+                                acessibilidade. São um ótimo ponto de partida, mas não substituem os testes humanos.</p>
+                            <ul>
+                                <li><code>Lighthouse</code> (integrado no Chrome DevTools)</li>
+                                <li><code>WAVE</code> (extensão de navegador)</li>
+                                <li><code>axe DevTools</code> (extensão e biblioteca)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Testes Manuais e Práticos:</strong>
+                            <p>Simular a experiência de um usuário com deficiência é a melhor forma de encontrar
+                                problemas de usabilidade.</p>
+                            <ul>
+                                <li>Use **leitores de tela** (VoiceOver, TalkBack, NVDA).</li>
+                                <li>Navegue na sua página ou app usando apenas o **teclado** (web) ou **gestos**
+                                    (mobile).</li>
+                                <li>Teste com **zoom** e diferentes **ajustes de fonte**.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Observação Importante:</strong>
+                            <p>Em **aplicativos móveis**, utilize os recursos nativos de acessibilidade do sistema
+                                operacional. Em **sites**, simule a experiência em navegadores diferentes para garantir
+                                compatibilidade.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="Benefícios da Acessibilidade" class="content-section alt-layout fade-in">
+            <div class="container section-container">
+                <div class="text-content">
+                    <h2>Benefícios da Acessibilidade</h2>
+                    <p>
+                        Investir em acessibilidade vai muito além de cumprir regulamentações; é uma estratégia que
+                        beneficia a todos. Ao remover barreiras, promovemos **mais inclusão e igualdade de
+                        oportunidades**, permitindo que pessoas com deficiência participem plenamente do universo
+                        digital. Essa prática resulta em uma significativa **ampliação de público**, pois mais usuários
+                        conseguem interagir e utilizar seu produto. Além disso, a acessibilidade melhora a **experiência
+                        de uso para todos**, um princípio conhecido como *design universal*. Por exemplo, as legendas em
+                        vídeos são essenciais para surdos, mas também são extremamente úteis para quem assiste ao
+                        conteúdo em um ambiente barulhento ou prefere ler.
+                    </p>
+                </div>
+                <div class="image-content">
+                    <img src="assets\imagens\eva-wahyuni-FMEjUpbmtZE-unsplash.svg"
+                        alt="Ilustração sobre o impacto positivo da acessibilidade digital.">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-block">
+                <h3>Para saber mais:</h3>
+                <p>Durante os anos de 2024 e 2025, um doutorando do grupo DMóvel desenvolveu uma revisão sistemática da
+                    literatura para a construção de aplicativos de georreferenciamento acessíveis.</p>
+                <img src="https://via.placeholder.com/300x200?text=Mapa+Mental"
+                    alt="Mapa mental sobre requisitos de acessibilidade.">
+            </div>
+            <div class="footer-block">
+                <h3>Referências</h3>
+                <ul>
+                    <li><a href="#">Referência 1</a></li>
+                    <li><a href="#">Referência 2</a></li>
+                    <li><a href="#">Referência 3</a></li>
+                    <li><a href="#">Referência 4</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 DMOVEL - IF</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Voltar ao topo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+    <div vw class="enabled" id="vlibras-widget" style="display: block;">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,366 @@
+/* --- Configurações Globais --- */
+:root {
+    --primary-color: #004c99;
+    /* Azul escuro, inspirado na capa */
+    --accent-color: #007bff;
+    /* Laranja, inspirado na imagem de referência */
+    --light-color: #f4f4f4;
+    --dark-color: #333;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: var(--dark-color);
+    font-size: 16px;
+    /* Fonte mínima de 16px */
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* --- Cabeçalho Principal --- */
+.main-header {
+    background-color: #fff;
+    /* Fundo branco */
+    padding: 15px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    /* Sombra suave abaixo do header */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: padding 0.3s, box-shadow 0.3s;
+}
+
+.main-header.shrink {
+    padding: 6px 0;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    transition: height 0.3s;
+}
+
+.main-header.shrink .logo img {
+    height: 36px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: var(--primary-color);
+    /* Links do menu em azul escuro para contraste */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav a:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* --- Seções de Conteúdo (Text & Image) --- */
+.content-section {
+    padding: 60px 0;
+    /* border-bottom: 1px solid #ddd; */
+    /* Removido para tirar a linha divisória */
+    position: relative;
+}
+
+.section-container {
+    display: flex;
+    align-items: center;
+    /* Centraliza verticalmente imagem e texto */
+    gap: 40px;
+    position: relative;
+}
+
+.image-content {
+    flex: 0 0 400px;
+    /* Largura fixa para a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 400px;
+    /* Altura fixa para a área da imagem */
+    position: relative;
+}
+
+.image-content img {
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 100px;
+    /* Fica fixa a partir de 100px do topo da viewport */
+}
+
+.text-content {
+    flex: 1;
+    min-width: 0;
+    max-width: 700px;
+    /* Limita a largura do texto */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    letter-spacing: 0.2px;
+}
+
+.text-content p {
+    margin-bottom: 18px;
+    font-size: 1.15rem;
+}
+
+.text-content ul,
+.text-content ol {
+    margin-bottom: 18px;
+    padding-left: 24px;
+}
+
+.text-content li {
+    margin-bottom: 10px;
+    font-size: 1.08rem;
+}
+
+.text-content strong,
+.text-content em {
+    /* background: #ffe; */
+    /* Removido para melhorar contraste no modo escuro */
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.text-content h2 {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.text-content h3 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+/* Alternar layout para as seções */
+.alt-layout .section-container {
+    flex-direction: row-reverse;
+}
+
+/* Destaque para a capa (primeira seção) */
+#intro .text-content h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 24px;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+#intro .text-content p {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    margin-bottom: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .section-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-content {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+
+    .image-content img {
+        position: static;
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    .text-content {
+        margin-top: 20px;
+    }
+}
+
+/* --- Animação Fade-in --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Rodapé --- */
+.main-footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-block {
+    flex: 1 1 300px;
+}
+
+.footer-block h3 {
+    color: var(--accent-color);
+    margin-bottom: 15px;
+}
+
+.footer-block img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.footer-block a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+
+    .header-container,
+    .section-container,
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav a {
+        padding: 10px 0;
+    }
+
+    .text-content {
+        margin-top: 20px;
+    }
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+/* Tema escuro */
+body.dark-mode {
+    --primary-color: #f4f4f4;
+    --accent-color: #ffd700;
+    --light-color: #222;
+    --dark-color: #f4f4f4;
+    background-color: #222;
+    color: #f4f4f4;
+}
+
+body.dark-mode .main-header {
+    background-color: #222;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .main-nav a {
+    color: #ffd700;
+}
+
+body.dark-mode .theme-toggle {
+    color: #ffd700;
+}
+
+body.dark-mode .main-footer {
+    background-color: #111;
+    color: #ffd700;
+}
+
+body.dark-mode .footer-block h3 {
+    color: #ffd700;
+}
+
+#back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 32px;
+    background: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s;
+    z-index: 1200;
+    display: none;
+}
+
+#back-to-top:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+#back-to-top.show {
+    display: block;
+}
