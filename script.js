@@ -239,4 +239,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // Menu hamburguer
+    const menuToggle = document.getElementById('menu-toggle');
+    const navUl = document.querySelector('.main-nav ul');
+    if (menuToggle && navUl) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = navUl.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
 });
