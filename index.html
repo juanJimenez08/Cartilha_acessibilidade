@@ -20,8 +20,9 @@
                 <ul>
                     <li><a href="#intro">Início</a></li>
                     <li><a href="#principios">Princípios</a></li>
-                    <li><a href="#desafios">Desafios</a></li>
-                    <li><a href="#importancia">Importância</a></li>
+                    <li><a href="#desafios">Compatibilidade</a></li>
+                    <li><a href="#importancia">Conteúdo</a></li>
+                    <li><a href="#Ferramentas_Acessibilidade">Ferramentas</a></li>
                 </ul>
             </nav>
             <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
@@ -53,8 +54,8 @@
                     <p>Um guia informativo para o planejamento e desenvolvimento de interfaces acessíveis.</p>
                 </div>
                 <div class="image-content">
-                    <img src="assets\imagens\karacis-studio-pquE90oyRjU-unsplash.svg"
-                        alt="Ilustração sobre desenvolvimento web acessível">
+                    <img src="assets\imagens\karacis-studio-pquE90oyRjU-unsplash.svg" alt="Ilustração de um grupo diversificado de quatro pessoas tirando uma
+                        selfie.">
                 </div>
             </div>
         </section>
@@ -94,7 +95,7 @@
 
                 </div>
                 <div class="image-content">
-                    <img src="assets\imagens\Guia-Criar-cursos-acessiveis_BR.webp"
+                    <img src="assets/imagens/Guia-Criar-cursos-acessiveis_BR.webp"
                         alt="Ilustração dos quatro princípios de acessibilidade WCAG.">
                 </div>
             </div>
@@ -108,61 +109,74 @@
                 </div>
                 <div class="text-content">
                     <h2>Compatibilidade com Tecnologias Assistivas</h2>
-                    <p>Para que sua aplicação ou página se torne acessível, ela deve ser desenvolvida para interagir
-                        corretamente com diversas tecnologias assistivas, permitindo que usuários com deficiência
-                        naveguem e utilizem o conteúdo de forma autônoma.</p>
-
                     <ul>
-                        <li>
-                            <strong>Leitores de Tela:</strong> Ferramentas essenciais que convertem texto e elementos da
-                            interface em áudio ou braile. Os principais incluem o NVDA e o JAWS (Windows), o VoiceOver
-                            (macOS e iOS) e o TalkBack (Android).
-                        </li>
-                        <li>
-                            <strong>Navegação:</strong> Garanta que a navegação seja possível para todos. Na web, a
-                            navegação via teclado é essencial. Em aplicativos móveis, a navegação via gestos (como
-                            toques e deslizes) deve ser robusta.
-                        </li>
-                        <li>
-                            <strong>Exemplos de Boas Práticas:</strong>
-                            <ul>
-                                <li>Na web, use <code>roles ARIA</code> para definir o papel de componentes que não são
-                                    semânticos, como um botão customizado.</li>
-                                <li>Em apps móveis, forneça sempre uma <code>accessibilityLabel</code> para descrever a
-                                    função de cada elemento da interface.</li>
-                            </ul>
-                        </li>
+                        <p>Para que sua aplicação ou página se torne acessível, ela deve ser desenvolvida para interagir
+                            corretamente com diversas tecnologias assistivas, permitindo que usuários com deficiência
+                            naveguem e utilizem o conteúdo de forma autônoma.</p>
+
+
+
+                        <strong>Leitores de Tela:</strong> Garanta que sua aplicação seja compatível com leitores de
+                        tela.
+                        Os principais incluem o NVDA e o JAWS (Windows), o VoiceOver
+                        (macOS e iOS) e o TalkBack (Android).
+
+
+                        <strong>Navegação:</strong> Na web, a navegação via teclado é essencial. Em aplicativos
+                        móveis, a navegação via gestos (como
+                        toques e deslizes) deve ser robusta.
+
+                        <p><strong>Exemplo:</strong></p>
+                        <p>
+                            Imagine um botão customizado em um site. Se ele não for programado
+                            corretamente, o leitor de tela não o reconhece. Mas se o
+                            desenvolvedor usa a propriedade <code>role="button"</code>, o leitor de
+                            tela entende a função do item, lendo em voz alta "botão" e permitindo
+                            que o usuário o acione facilmente.
+                        </p>
                     </ul>
                 </div>
-            </div>
         </section>
+        </div>
+        <button class="acessible-image-button" aria-label="Botão de demostração para acessibilidade">
+            <img src="assets\imagens\round-icons-LUtFr7w1kN4-unsplash(1).svg" alt="" class="button-icon">
+            Botão teste
+        </button>
+
 
         <section id="importancia" class="content-section  fade-in">
             <div class="container section-container">
                 <div class="text-content">
                     <h2>Conteúdo Visual e Multimídia</h2>
-                    <p>O conteúdo visual e auditivo deve ser acessível para que todos os usuários possam compreender a
-                        informação. Isso inclui fornecer alternativas de texto para imagens e legendas para mídias em
+                    <p>O conteúdo visual e auditivo deve ser acessível para que todos os usuários possam compreender
+                        a
+                        informação. Isso inclui fornecer alternativas de texto para imagens e legendas para mídias
+                        em
                         vídeo.</p>
 
                     <ul>
                         <li>
-                            <strong>Texto Alternativo em Imagens:</strong> Use o atributo <code>alt</code> em todas as
+                            <strong>Texto Alternativo em Imagens:</strong> Use o atributo <code>alt</code> em todas
+                            as
                             imagens para descrever seu conteúdo ou função. Para imagens puramente decorativas, o
-                            atributo deve ser vazio (<code>alt=""</code>), informando ao leitor de tela que ele pode ser
+                            atributo deve ser vazio (<code>alt=""</code>), informando ao leitor de tela que ele pode
+                            ser
                             ignorado.
                         </li>
                         <li>
                             <strong>Legendas e Transcrições:</strong> Forneça legendas ou transcrições para todo
-                            conteúdo de vídeo e áudio. Isso é essencial para usuários com deficiência auditiva, além de
+                            conteúdo de vídeo e áudio. Isso é essencial para usuários com deficiência auditiva, além
+                            de
                             beneficiar aqueles que não podem ouvir o áudio no momento.
                         </li>
                         <li>
-                            <strong>Contraste de Cores:</strong> Garanta que o contraste entre o texto e o fundo seja
+                            <strong>Contraste de Cores:</strong> Garanta que o contraste entre o texto e o fundo
+                            seja
                             suficiente para que o conteúdo seja lido por pessoas com baixa visão ou daltonismo. Para
                             garantir a legibilidade, o W3C recomenda uma "taxa de contraste" mínima.:
                             <ul>
-                                <li>Para <strong>texto pequeno</strong> (abaixo de 18pt regular ou 14pt em negrito), a
+                                <li>Para <strong>texto pequeno</strong> (abaixo de 18pt regular ou 14pt em negrito),
+                                    a
                                     taxa de
                                     contraste deve ser de, no mínimo, <strong>4,5:1</strong>.</li>
                                 <li>Para <strong>texto grande</strong> (18pt ou mais regular, ou 14pt ou mais em
@@ -173,13 +187,56 @@
 
                     </ul>
                 </div>
-                <div class="image-content">
-                    <img src="assets\imagens\public-domain-vectors-AqHF8gSN59o-unsplash.svg"
-                        alt="Ilustração sobre o impacto positivo da acessibilidade digital.">
+                <div class="image-content"
+                    data-tooltip="Ilustração sobre o impacto positivo da acessibilidade digital.">
+                    <img src="assets/imagens/public-domain-vectors-AqHF8gSN59o-unsplash.svg"
+                        alt="Ilustração sobre o impacto positivo da acessibilidade digital." />
+                    <span class="custom-tooltip">Ilustração de um cenário montanhoso com clima nevoento.</span>
                 </div>
             </div>
 
         </section>
+        <section class="card" role="region" aria-labelledby="saiba-mais-title">
+            <!-- Barra do “navegador” -->
+            <div class="chrome">
+                <span aria-hidden="true" class="dot red"></span>
+                <span aria-hidden="true" class="dot yellow"></span>
+                <span aria-hidden="true" class="dot green"></span>
+            </div>
+
+            <div class="card-content">
+                <h2 id="saiba-mais-title" class="title">SAIBA MAIS</h2>
+
+                <ul class="list">
+                    <li>
+                        <span class="chevron">»</span>
+                        <span class="card-text">
+                            Para informações mais detalhadas acesse o guia de desenvolvidor android e ios:
+                        </span>
+                        <a class="link"
+                            href="https://developer.android.com/guide/topics/ui/accessibility/principles?hl=pt-br"
+                            target="_blank" rel="noopener">
+                            https://developer.android.com/
+                        </a>
+                        <a class="link"
+                            href="https://developer.apple.com/design/human-interface-guidelines/accessibility"
+                            target="_blank" rel="noopener">
+                            https://developer.apple.com/
+                        </a>
+                    </li>
+                    <li>
+                        <span class="chevron">»</span>
+                        <span class="card-text">
+                            Aqui você pode colsultar o Guia de colsulta rápida do WCAG:
+                        </span>
+                        <a class="link" href="https://guia-wcag.com/" target="_blank" rel="noopener">
+                            https://guia-wcag.com/
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
         <section id="Ferramentas_Acessibilidade" class="content-section fade-in">
             <div class="container section-container">
                 <div class="image-content">
@@ -188,55 +245,37 @@
                 </div>
                 <div class="text-content">
                     <h2>Ferramentas e Testes de Acessibilidade</h2>
-                    <p>Para garantir que seu produto digital seja acessível, é fundamental combinar a automação de
-                        ferramentas com testes práticos e manuais.</p>
+                    <p>Para garantir a acessibilidade de seu produto digital, é essencial combinar a análise de
+                        ferramentas automáticas com testes manuais práticos. Ferramentas como Lighthouse, WAVE e axe
+                        DevTools são excelentes para identificar problemas básicos e seguir as diretrizes de
+                        acessibilidade, mas não substituem a experiência humana. Por isso, é fundamental fazer
+                        testes manuais: simule o uso do produto com leitores de tela, navegue usando apenas o
+                        teclado ou gestos e ajuste o zoom ou o tamanho da fonte para encontrar problemas de
+                        usabilidade que só a experiência real pode revelar</p>
 
-                    <ul>
-                        <li>
-                            <strong>Ferramentas de Análise Automática:</strong>
-                            <p>Elas analisam o código e encontram erros básicos e padrões que violam as diretrizes de
-                                acessibilidade. São um ótimo ponto de partida, mas não substituem os testes humanos.</p>
-                            <ul>
-                                <li><code>Lighthouse</code> (integrado no Chrome DevTools)</li>
-                                <li><code>WAVE</code> (extensão de navegador)</li>
-                                <li><code>axe DevTools</code> (extensão e biblioteca)</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Testes Manuais e Práticos:</strong>
-                            <p>Simular a experiência de um usuário com deficiência é a melhor forma de encontrar
-                                problemas de usabilidade.</p>
-                            <ul>
-                                <li>Use **leitores de tela** (VoiceOver, TalkBack, NVDA).</li>
-                                <li>Navegue na sua página ou app usando apenas o **teclado** (web) ou **gestos**
-                                    (mobile).</li>
-                                <li>Teste com **zoom** e diferentes **ajustes de fonte**.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Observação Importante:</strong>
-                            <p>Em **aplicativos móveis**, utilize os recursos nativos de acessibilidade do sistema
-                                operacional. Em **sites**, simule a experiência em navegadores diferentes para garantir
-                                compatibilidade.</p>
-                        </li>
-                    </ul>
+
                 </div>
             </div>
         </section>
 
-        <section id="Benefícios da Acessibilidade" class="content-section alt-layout fade-in">
+
+
+        <section id="Benefícios" class="content-section alt-layout fade-in">
             <div class="container section-container">
                 <div class="text-content">
                     <h2>Benefícios da Acessibilidade</h2>
                     <p>
-                        Investir em acessibilidade vai muito além de cumprir regulamentações; é uma estratégia que
-                        beneficia a todos. Ao remover barreiras, promovemos **mais inclusão e igualdade de
-                        oportunidades**, permitindo que pessoas com deficiência participem plenamente do universo
-                        digital. Essa prática resulta em uma significativa **ampliação de público**, pois mais usuários
-                        conseguem interagir e utilizar seu produto. Além disso, a acessibilidade melhora a **experiência
-                        de uso para todos**, um princípio conhecido como *design universal*. Por exemplo, as legendas em
-                        vídeos são essenciais para surdos, mas também são extremamente úteis para quem assiste ao
-                        conteúdo em um ambiente barulhento ou prefere ler.
+                        Acessibilidade digital não é um extra, mas uma necessidade estratégica. É a forma mais eficaz de
+                        expandir seu público e tornar seu produto útil para todos.
+                    </p>
+                    <p>
+                        Remover barreiras em sites e aplicativos não apenas ajuda pessoas com deficiência, mas melhora a
+                        experiência de todos os usuários. Pense nas legendas em vídeos, essenciais para surdos, mas
+                        úteis para qualquer um assistindo em um ambiente barulhento.
+                    </p>
+                    <p>
+                        Comece a pensar em design inclusivo desde o início do seu projeto. Isso garante que seu produto
+                        seja feito para todos, eliminando a necessidade de ajustes caros e demorados no futuro.
                     </p>
                 </div>
                 <div class="image-content">
@@ -251,23 +290,45 @@
         <div class="container footer-content">
             <div class="footer-block">
                 <h3>Para saber mais:</h3>
-                <p>Durante os anos de 2024 e 2025, um doutorando do grupo DMóvel desenvolveu uma revisão sistemática da
-                    literatura para a construção de aplicativos de georreferenciamento acessíveis.</p>
-                <img src="https://via.placeholder.com/300x200?text=Mapa+Mental"
-                    alt="Mapa mental sobre requisitos de acessibilidade.">
+                <p>Durante 2024 e 2025 o doutorando Luciano Teran,um dos nossos membros de grupo de trabalho, realizou
+                    uma revisão sistemática da literatura para a construção de aplicativos de georreferenciamento
+                    acessíveis às diversas pessoas com deficiência. </p>
+
+                <!-- Miniatura na página -->
+                <img src="assets/imagens/Implemented resources - systematic literature review.jpg"
+                    alt="Mapa mental sobre requisitos de acessibilidade." class="mapa-mental-thumb" />
+
+                <!-- Modal para ampliar e dar zoom -->
+                <div id="mapa-mental-modal" class="modal" style="display:none;">
+                    <span class="close-modal" aria-label="Fechar">&times;</span>
+                    <img class="modal-img" src="assets/imagens/Implemented resources - systematic literature review.jpg"
+                        alt="Mapa mental sobre requisitos de acessibilidade." />
+                </div>
+
+                <p>A Figura acima destaca os resultados preliminares de um
+                    conjunto de requisitos de acessibilidade que devem estar apresentes nesses aplicativo. Esses
+                    resultados foram consolidados em mapa mental para facilitar a implementação desses recursos.</p>
             </div>
             <div class="footer-block">
                 <h3>Referências</h3>
                 <ul>
-                    <li><a href="#">Referência 1</a></li>
-                    <li><a href="#">Referência 2</a></li>
-                    <li><a href="#">Referência 3</a></li>
-                    <li><a href="#">Referência 4</a></li>
+                    <li><a class="link"
+                            href="https://ceweb.br/cartilhas/cartilha-w3cbr-acessibilidade-web-fasciculo-V/">https://ceweb.br/cartilhas/</a>
+                    </li>
+                    <li><a class="link"
+                            href="https://www.hostinger.com/tutorials/web-accessibility">https://www.hostinger.com</a>
+                    </li>
+                    <li><a class="link"
+                            href="https://www.iseazy.com/br/guias/criar-conteudo-acessivel/">https://www.iseazy.com/br</a>
+                    </li>
+                    <li><a class="link"
+                            href="https://www-w3-org.translate.goog/WAI/fundamentals/accessibility-intro/?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt&_x_tr_pto=tc">https://www-w3-org.translate.goog/</a>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2025 DMOVEL - IF</p>
+            <p>&copy; 2025 </p>
         </div>
     </footer>
 
